@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ModForge – Minecraft MCBE Mods & Packs</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ FLOATING WEAPONS ░░ -->
+  <div class="weapon weapon--sword" aria-hidden="true">
+    <svg viewBox="0 0 20 60" xmlns="http://www.w3.org/2000/svg" class="sword-svg">
+      <!-- Blade -->
+      <rect x="8"  y="0"  width="4" height="4"  fill="#A8F0F4"/>
+      <rect x="8"  y="4"  width="4" height="4"  fill="#6ED8DE"/>
+      <rect x="8"  y="8"  width="4" height="4"  fill="#A8F0F4"/>
+      <rect x="8"  y="12" width="4" height="4"  fill="#6ED8DE"/>
+      <rect x="8"  y="16" width="4" height="4"  fill="#A8F0F4"/>
+      <rect x="8"  y="20" width="4" height="4"  fill="#6ED8DE"/>
+      <rect x="8"  y="24" width="4" height="4"  fill="#A8F0F4"/>
+      <rect x="8"  y="28" width="4" height="4"  fill="#6ED8DE"/>
+      <!-- Guard -->
+      <rect x="2"  y="32" width="16" height="4" fill="#8B6340"/>
+      <!-- Handle -->
+      <rect x="8"  y="36" width="4" height="4"  fill="#6B4A25"/>
+      <rect x="8"  y="40" width="4" height="4"  fill="#8B6340"/>
+      <rect x="8"  y="44" width="4" height="4"  fill="#6B4A25"/>
+      <!-- Pommel -->
+      <rect x="6"  y="48" width="8" height="4"  fill="#8B6340"/>
+      <!-- Shine on blade -->
+      <rect x="9"  y="2"  width="2" height="2"  fill="#D4FBFF" opacity="0.7"/>
+      <rect x="9"  y="10" width="2" height="2"  fill="#D4FBFF" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <div class="weapon weapon--hammer" aria-hidden="true">
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" class="hammer-svg">
+      <!-- Hammer head -->
+      <rect x="0"  y="4"  width="36" height="20" fill="#707070"/>
+      <rect x="0"  y="4"  width="36" height="4"  fill="#969696"/>
+      <rect x="0"  y="4"  width="4"  height="20" fill="#969696"/>
+      <rect x="32" y="4"  width="4"  height="20" fill="#4A4A4A"/>
+      <rect x="0"  y="20" width="36" height="4"  fill="#4A4A4A"/>
+      <!-- Hammer face detail -->
+      <rect x="4"  y="8"  width="8" height="8"   fill="#808080"/>
+      <rect x="20" y="8"  width="8" height="8"   fill="#606060"/>
+      <!-- Handle -->
+      <rect x="28" y="24" width="8" height="32"  fill="#8B6340"/>
+      <rect x="28" y="24" width="4" height="32"  fill="#A07848"/>
+      <rect x="28" y="52" width="8" height="4"   fill="#6B4A25"/>
+    </svg>
+  </div>
+
+  <!-- ░░ HEADER ░░ -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#home" class="nav__logo">
+        <img src="logo.png" alt="ModForge Logo" class="nav__logo-img" />
+        <span class="nav__logo-text">Mod<span class="forge">Forge</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#mods">Mods</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#home"  onclick="closeMobile()">Home</a>
+      <a href="#mods"  onclick="closeMobile()">Mods</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+    </div>
+  </header>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <p class="hero__tag">✦ Minecraft Bedrock Edition ✦</p>
+      <h1 class="hero__title">Your Ultimate<br/><span class="highlight">Mod Collection</span></h1>
+      <p class="hero__sub">Hand-picked texture packs, performance boosts & gameplay enhancers — all in one place. Click. Download. Dominate.</p>
+      <a href="#mods" class="btn btn--primary">Browse All Mods ↓</a>
+    </div>
+    <!-- Grass/dirt block divider -->
+    <div class="grass-divider">
+      <div class="grass-strip"></div>
+      <div class="dirt-strip"></div>
+    </div>
+  </section>
+
+  <!-- ░░ STATS BAR ░░ -->
+  <div class="stats-bar">
+    <div class="stats-bar__item"><span class="stat-num">20</span><span class="stat-label">Mods &amp; Packs</span></div>
+    <div class="stats-bar__sep">⬛</div>
+    <div class="stats-bar__item"><span class="stat-num">Free</span><span class="stat-label">All Downloads</span></div>
+    <div class="stats-bar__sep">⬛</div>
+    <div class="stats-bar__item"><span class="stat-num">MCBE</span><span class="stat-label">Bedrock Edition</span></div>
+  </div>
+
+  <!-- ░░ MODS GRID ░░ -->
+  <section class="mods-section" id="mods">
+    <div class="section-header">
+      <h2 class="section-title">All <span class="highlight">Mods &amp; Packs</span></h2>
+      <p class="section-sub">Click any card to view details and download</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Texture Pack">Texture Packs</button>
+      <button class="filter-btn" data-filter="Performance">Performance</button>
+      <button class="filter-btn" data-filter="PvP">PvP</button>
+      <button class="filter-btn" data-filter="Utility">Utility</button>
+    </div>
+
+    <div class="mods-grid" id="modsGrid"></div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <h2 class="section-title">About <span class="highlight">ModForge</span></h2>
+      <p>ModForge is a curated collection of the best Minecraft Bedrock Edition mods, texture packs and performance enhancers. Every pack here has been personally tested and selected for quality. No junk — just the best.</p>
+      <div class="about-blocks">
+        <div class="about-block">
+          <span class="about-icon">🔨</span>
+          <h3>Hand-Crafted</h3>
+          <p>Every mod is personally reviewed before being added to the forge.</p>
+        </div>
+        <div class="about-block">
+          <span class="about-icon">⚡</span>
+          <h3>Performance First</h3>
+          <p>We prioritise packs that keep your FPS high and your gameplay smooth.</p>
+        </div>
+        <div class="about-block">
+          <span class="about-icon">🆓</span>
+          <h3>Always Free</h3>
+          <p>Every single download on ModForge is completely free, forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="grass-divider grass-divider--flip">
+      <div class="grass-strip"></div>
+      <div class="dirt-strip"></div>
+    </div>
+    <div class="footer__inner">
+      <img src="logo.png" alt="ModForge" class="footer__logo" />
+      <p class="footer__text">ModForge &copy; 2025 — Minecraft Bedrock Edition Mods</p>
+      <p class="footer__note">Not affiliated with Mojang or Microsoft.</p>
+    </div>
+  </footer>
+
+  <!-- ░░ MODAL ░░ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal" id="modal">
+      <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal__img-wrap">
+        <img class="modal__img" id="modalImg" alt="" />
+        <span class="modal__category" id="modalCategory"></span>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__name" id="modalName"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <a class="btn btn--download" id="modalDownload" href="#" target="_blank" rel="noopener noreferrer">
+          ⬇&nbsp; Download from MediaFire
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
